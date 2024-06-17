@@ -28,3 +28,24 @@ function activelink(event){
     }
     event.currentTarget.classList.add('active-nav');
 }
+// ---------------------scroll js---------------------
+ScrollReveal({
+    distance:'80px',
+    duration:2000,
+    delay:200,
+    origin:'top',
+});
+// ------------------scroll js header section----------------
+ScrollReveal().reveal('.hero-text, .hero-content',{ origin:'top'});
+ScrollReveal().reveal('.social-icons',{ delay:600});
+ScrollReveal().reveal('.btn',{delay:1200});
+// ---------------scroll js about section------------
+ScrollReveal().reveal('.about-col-1 ',{ origin:'left'});
+ScrollReveal().reveal('.about-col-2', { delay: 600 , origin:'left'});
+// -----------scroll js portfolio section--------------
+ScrollReveal().reveal('.one',{origin:'bottom'});
+ScrollReveal().reveal('.two',{origin:'bottom' , delay:300});
+ScrollReveal().reveal('.three',{origin:'bottom' , delay:600});
+// --------------scroll js contact section-------------
+ScrollReveal().reveal('.contact-left',{origin:'left'});
+ScrollReveal().reveal('.contact-right',{origin:'right'});
