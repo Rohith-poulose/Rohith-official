@@ -383,9 +383,96 @@ form button {
     font-weight: 300;
     margin-top: 20px;
 }
-#msg{
+
+#msg {
     color: rgb(11, 255, 11);
     font-size: 18px;
-    font-weight: 500; 
+    font-weight: 500;
     margin: 10px 0;
+}
+.top-btn{
+    position: sticky;
+    top: 100vh;
+    left: 100%;
+    z-index: 100;
+    display: none;
+}
+.top-btn a{
+    color: var(--text-color);
+}
+.top-btn a i{
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 50px;
+    background: var(--main-color);
+}
+nav .fa-solid {
+    display: none;
+}
+@media screen and (max-width:600px) {
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background-color: var(--main-color);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul i {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .hero-text {
+        font-size: 20px;
+    }
+
+    .typing {
+        font-size: 20px;
+    }
+
+    .hero-content {
+        font-size: 14px;
+    }
+
+    .social-icons i {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        padding: 20px 0;
+    }
+    section{
+        padding: 25px 10px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+    .top-btn{
+        display: block;
+    }
 }

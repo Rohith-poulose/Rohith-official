@@ -67,3 +67,12 @@ form.addEventListener('submit', e => {
     })
     .catch(error => console.error('Error!', error.message))
 })
+// -----------------menu toggle-----------------
+const menu = document.getElementById("menu")
+
+function openmenu(){
+    menu.style.right = '0'
+}
+function closemenu(){
+    menu.style.right = '-200px';
+}
