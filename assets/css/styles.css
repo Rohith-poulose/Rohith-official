@@ -180,8 +180,6 @@ section {
 
 .about-col-1 {
     flex-basis: 35%;
-    border-radius: 15px;
-    overflow: hidden;
 }
 
 .about-col-1 img {
@@ -374,4 +372,14 @@ form button {
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.copyright {
+    background-color: #262626;
+    padding: 25px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
 }
