@@ -383,3 +383,9 @@ form button {
     font-weight: 300;
     margin-top: 20px;
 }
+#msg{
+    color: rgb(11, 255, 11);
+    font-size: 18px;
+    font-weight: 500; 
+    margin: 10px 0;
+}
