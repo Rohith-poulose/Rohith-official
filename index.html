@@ -16,19 +16,19 @@
         <!-- -------------nav bar--------------- -->
         <div class="navbar">
             <nav>
-                <div class="logo-div">
-                    <a href="#header"><img src="assets/images/logo2.png" alt="logo" class="logo"></a>
-                </div>
-                <ul>
-                    <li><a href="#header" class="active-nav">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+                    <div class="logo-div">
+                        <a href="#header"><img src="assets/images/logo2.png" alt="logo" class="logo"></a>
+                    </div>
+                    <ul>
+                        <li><a  onclick="activelink(event)" class="nav-links active-nav" href="#header" >Home</a></li>
+                        <li><a  onclick="activelink(event)" class="nav-links" href="#about">About</a></li>
+                        <li><a  onclick="activelink(event)" class="nav-links" href="#portfolio">Portfolio</a></li>
+                        <li><a  onclick="activelink(event)" class="nav-links" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         <!-- ----------------hero section-------------- -->
-        <div class="heading">
+        <div class="heading" id="heading">
             <p class="hero-text">Hi, Myself <br>
                 <span class="name">Rohith Poulose </span><br>
                 And i'm a <span class="typing">typing</span>
@@ -125,7 +125,34 @@
         </div>
     </div>
 </section>
-
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><a href="mailto:rohithinteractive14@gmail.com"><i class="fa-solid fa-paper-plane"></i>rohithinteractive14@gmail.com</a></p>
+                <p><a href="tel:+917907353440"><i class="fa-solid fa-phone"></i>+91 7907353440</a></p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100082582630498"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/_rohith_poulose_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.behance.net/rohithpoulose?log_shim_removal=1"><i
+                            class="fa-brands fa-behance"></i></a>
+                    <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <button class="btn"><a href="assets/images/resume.pdf" download>Resume</a></button>
+            </div>
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <button class="btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- ---------------type js---------- -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- ------------main js----------- -->

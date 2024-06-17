@@ -1,3 +1,5 @@
+
+// -----------------type js---------------
 var typed = new Typed('.typing', {
     strings: ['UI/UX designer', 'Frontend-Developer','Graphic Designer'],
     typeSpeed: 50,
@@ -5,6 +7,7 @@ var typed = new Typed('.typing', {
     backDelay:1000,
     loop: true
   });
+//   -----------------about toggle-----------------------
   var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents")
 function opentab(tabname) {
@@ -16,4 +19,12 @@ function opentab(tabname) {
     }
     event.currentTarget.classList.add('active-link')
     document.getElementById(tabname).classList.add('active-tab');
+}
+// ------------------active nav-------------
+var navlinks = document.getElementsByClassName("nav-links");
+function activelink(event){
+    for (navlink of navlinks) {
+        navlink.classList.remove('active-nav');
+    }
+    event.currentTarget.classList.add('active-nav');
 }
