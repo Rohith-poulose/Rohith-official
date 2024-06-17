@@ -458,14 +458,13 @@ nav .fa-solid {
     .btn {
         font-size: 14px;
     }
-
     .about-col-1,
     .about-col-2 {
         flex-basis: 100%;
         padding: 20px 0;
     }
     section{
-        padding: 25px 10px;
+        padding: 0px 10px;
     }
 
     .contact-left,
