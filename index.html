@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- -----------------favicon------------------------ -->
     <link rel="shortcut icon" href="assets/images/favicon2.png" type="image/x-icon">
-  <!-- ----------------------  fontawesome------------ -->
+    <!-- ----------------------  fontawesome------------ -->
     <script src="https://kit.fontawesome.com/b113d65810.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- --------------------header------------- -->
-    <header id="header"  >
+    <header id="header">
         <!-- -------------nav bar--------------- -->
         <div class="navbar">
             <nav>
@@ -53,10 +53,10 @@
         </div>
     </header>
     <div class="top-btn">
-       <a href="#header"> <i class="fa-solid fa-arrow-up"></i></a>
+        <a href="#header"> <i class="fa-solid fa-arrow-up"></i></a>
     </div>
     <!-- -------------------about-------------- -->
-    <section id="about" >
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -116,8 +116,8 @@
                     <img src="assets/images/nexgear-branding.jpg">
                     <div class="overlay">
                         <h1>Brandings</h1>
-                        <p>Versatile branding solutions for businesses</p>                      
-                        <a onclick="working()" target="_blank" href="https://drive.google.com/drive/folders/1LwyD3vqSta50s7tG3hs7LisGXmCgcXod?usp=drive_link"><i
+                        <p>Versatile branding solutions for businesses</p>
+                        <a onclick="working()" target="_blank" href="#"><i
                                 class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
@@ -127,7 +127,8 @@
                         <h1>seasonal posters</h1>
                         <p>Unique seosanal posters with brand consistency and style
                         </p>
-                        <a target="_blank" href="https://drive.google.com/drive/folders/1xt0jNVM6fIe5H5mQWFNYZOxnCl5xFlbx?usp=drive_link"><i
+                        <a target="_blank"
+                            href="https://drive.google.com/drive/folders/1xt0jNVM6fIe5H5mQWFNYZOxnCl5xFlbx?usp=drive_link"><i
                                 class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
@@ -144,13 +145,14 @@
                                 class="fa-solid fa-paper-plane"></i>rohithinteractive14@gmail.com</a></p>
                     <p><a href="tel:+917907353440"><i class="fa-solid fa-phone"></i>+91 7907353440</a></p>
                     <div class="social-icons">
-                <!-- <a target="_blank" href="https://www.facebook.com/profile.php?id=100082582630498"><i
+                        <!-- <a target="_blank" href="https://www.facebook.com/profile.php?id=100082582630498"><i
                         class="fa-brands fa-facebook"></i></a> -->
-                <a target="_blank" href="https://www.instagram.com/my_uxlab/"><i class="fa-brands fa-instagram"></i></a>
-                <a target="_blank" href="https://www.behance.net/rohithpoulose?log_shim_removal=1"><i
-                        class="fa-brands fa-behance"></i></a>
-                <a target="_blank" href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
+                        <a target="_blank" href="https://www.instagram.com/my_uxlab/"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.behance.net/rohithpoulose?log_shim_removal=1"><i
+                                class="fa-brands fa-behance"></i></a>
+                        <a target="_blank" href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
                     <button class="btn"><a href="assets/resume/ROHITH_P_RESUME.pdf" download>Resume</a></button>
                 </div>
                 <div class="contact-right">
@@ -158,7 +160,10 @@
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" placeholder="Your Message" rows="6"></textarea>
-                        <button class="btn" style="margin-top: 10px;">Send</button>
+                        <button class="btn" id="submitBtn" style="margin-top: 10px;">
+                            <span id="btnText">Send</span>
+                            <span id="spinner" class="spinner" style="display: none;"></span>
+                        </button>
                     </form>
                     <p id="msg"></p>
                 </div>
