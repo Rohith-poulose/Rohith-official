@@ -52,21 +52,37 @@ ScrollReveal().reveal('.contact-right',{origin:'right'});
 
 
 // -------------------------newsletter google form------------------------
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzl15JFDIfBJv3Iez2ReS_9ql_bIKbeIE7PJERblO70rDTWFKXkR7aVrSwuS-eUUtqp/exec'
-const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById("msg")
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwDctC729_R702VKa1K10pCXUDLWhWY2Se379rjuQvYOHcdMidrWw85uGySelK3b4_HzA/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+
 form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-        msg.innerHTML="Message sent successfully"
-        setTimeout (function(){
-            msg.innerHTML="";
-        },5000);
-        form.reset()
-    })
-    .catch(error => console.error('Error!', error.message))
-})
+  e.preventDefault();
+
+  fetch(scriptURL, {
+    method: 'POST',
+    mode: 'cors',          // important for cross-origin
+    headers: {
+      'Accept': 'application/json'
+    },
+    body: new FormData(form)
+  })
+  .then(response => {
+    if (!response.ok) throw new Error("Network response was not ok");
+    return response.json();
+  })
+  .then(data => {
+    console.log('Success:', data);
+    msg.innerHTML = "Message sent successfully";
+    setTimeout(() => { msg.innerHTML = ""; }, 5000);
+    form.reset();
+  })
+  .catch(error => {
+    console.error('Error!', error.message);
+    msg.innerHTML = "Failed to send message. Please try again.";
+  });
+});
+
 // -----------------menu toggle-----------------
 const menu = document.getElementById("menu")
 
@@ -75,4 +91,7 @@ function openmenu(){
 }
 function closemenu(){
     menu.style.right = '-200px';
+}
+function working(){
+    window.alert("project under maintenance")
 }
