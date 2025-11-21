@@ -96,6 +96,32 @@ nav ul li a:hover::after {
     padding: 10% 10%;
     
 }
+/* Background Carousel Container */
+.bg-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 20%;
+    z-index: -1; /* sends it behind content */
+}
+
+/* Each Image */
+.bg-carousel .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Visible Slide */
+.bg-carousel .slide.active {
+    opacity: 1;
+}
 
 .hero-text {
     font-size: 26px;
