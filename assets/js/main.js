@@ -1,7 +1,7 @@
 
 // -----------------type js---------------
 var typed = new Typed('.typing', {
-    strings: ['UI/UX designer', 'Frontend-Developer','Graphic Designer'],
+    strings: ['UI/UX designer', 'Frontend-Developer','Graphic Designer','3d artist','3d Animator'],
     typeSpeed: 50,
     backSpeed: 50,
     backDelay:1000,
