@@ -1,4 +1,4 @@
-
+window.alert("Welcome to Rohith's Portfolio Website! Explore my projects and skills. Feel free to reach out through the contact section. This site have some bugs because is under active development, report me, we will fix shortly.so stay tuned for updates!");
 // -----------------type js---------------
 var typed = new Typed('.typing', {
     strings: ['UI/UX designer', 'Frontend-Developer','Graphic Designer','3d artist','3d Animator'],

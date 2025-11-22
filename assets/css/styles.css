@@ -656,9 +656,9 @@ nav .fa-solid {
     .name { font-size: 2.8rem; }
     .typing { font-size: 1.6rem; }
     .hero-content { font-size: 1.4rem; width: 100%; }
-    .social-icons a i { font-size: 18px; margin-right: 12px; padding: 6px; }
+    .social-icons a i { font-size: 18px;  padding: 6px; }
     .btn { font-size: 1.4rem; padding: 8px 16px; }
-    .showmorebtn { display: block; width: 100%; box-sizing: border-box; }
+    .showmorebtn { display: block; width: 100%; box-sizing: border-box; border: 1px solid #fff; }
     .work { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); grid-gap: 16px; }
     .about-col-1, .about-col-2 { flex-basis: 100%; }
     .contact-left, .contact-right { flex-basis: 100%; }
