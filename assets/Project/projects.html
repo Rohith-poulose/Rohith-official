@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Project.css">
+    <title>My Works</title>
+</head>
+<body>
+    <header id="header">
+        <!-- -------------nav bar--------------- -->
+        <div class="navbar">
+            <nav>
+                <div class="logo-div">
+                    <a href="#header"><img src="/assets/images/logo2.png" alt="logo" class="logo"></a>
+                </div>
+                <ul id="menu">
+                    <li><a onclick="activelink(event)" class="nav-links " href="/index.html">Home</a></li>
+                    <li><a onclick="activelink(event)" class="nav-links" href="#about">About</a></li>
+                    <li><a onclick="activelink(event)" class="nav-links active-nav" href="#portfolio">Portfolio</a></li>
+                    <li><a onclick="activelink(event)" class="nav-links" href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
