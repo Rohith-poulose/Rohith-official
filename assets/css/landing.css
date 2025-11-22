@@ -223,7 +223,7 @@ section {
 
     /* On small screens, the fixed layer can cause rendering issues — use absolute */
     .landing-layer {
-        position: absolute;
+        position: fixed;
     }
 }
 
