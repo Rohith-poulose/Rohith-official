@@ -24,6 +24,21 @@
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
         </div>
+        <!-- -------------portfolio section--------------- -->
+                <section id="portfolio" class="container">
+                    <h2 class="sub-title">Portfolio</h2>
+
+                    <div class="portfolio-controls" style="margin:16px 0; display:flex; gap:12px; align-items:center;">
+                        <label for="categoryFilter" style="color:var(--text-color); font-weight:600;">Filter by niche:</label>
+                        <select id="categoryFilter" aria-label="Filter projects by category">
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+
+                    <div id="projectsGrid" class="projects-grid"></div>
+                </section>
     </header>
+    
 </body>
+    <script src="../js/project.js"></script>
 </html>
