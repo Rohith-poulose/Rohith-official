@@ -3,36 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- -----------------favicon------------------------ -->
+    <link rel="shortcut icon" href="/assets/images/favicon2.png" type="image/x-icon">
+    <!-- Global and landing styles so project page matches index visuals -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/landing.css">
     <link rel="stylesheet" href="Project.css">
     <title>My Works</title>
 </head>
 <body>
     <header id="header">
-        <!-- -------------nav bar--------------- -->
-        <div class="navbar">
-            <nav>
-                <div class="logo-div">
-                    <a href="#header"><img src="/assets/images/logo2.png" alt="logo" class="logo"></a>
-                </div>
-                <ul id="menu">
-                    <li><a onclick="activelink(event)" class="nav-links " href="/index.html">Home</a></li>
-                    <li><a onclick="activelink(event)" class="nav-links" href="#about">About</a></li>
-                    <li><a onclick="activelink(event)" class="nav-links active-nav" href="#portfolio">Portfolio</a></li>
-                    <li><a onclick="activelink(event)" class="nav-links" href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
+        <!-- Landing visuals: animated blobs + glass panel (decorative, aria-hidden) -->
+        <div class="landing-layer" aria-hidden="true">
+            <div class="blobs">
+                <span class="blob" data-speed="0.12"></span>
+                <span class="blob" data-speed="0.08"></span>
+                <span class="blob" data-speed="0.18"></span>
+            </div>
+            <div class="glass-panel"></div>
         </div>
+        <!-- -------------nav bar--------------- -->
+          <div class="navbar">
+              <nav>
+                <a href="/index.html" class="back-home" aria-label="Back to Home">Back to Home</a>
+              </nav>
+                
+            
+            
+          </div>
         <!-- -------------portfolio section--------------- -->
                 <section id="portfolio" class="container">
-                    <h2 class="sub-title">Portfolio</h2>
+                    <h2 class="sub-title">My Works</h2>
 
-                    <div class="portfolio-controls" style="margin:16px 0; display:flex; gap:12px; align-items:center;">
-                        <label for="categoryFilter" style="color:var(--text-color); font-weight:600;">Filter by niche:</label>
+                    <div class="portfolio-controls">
+                        <label for="categoryFilter" style="color:var(--text-color); font-weight:600;">Filter:</label>
                         <select id="categoryFilter" aria-label="Filter projects by category">
                             <option value="all">All</option>
                         </select>
+
+                        <label for="sortSelect" style="color:var(--text-color); font-weight:600; margin-left:8px;">Sort:</label>
+                        <select id="sortSelect" aria-label="Sort projects">
+                            <option value="newest">Newest</option>
+                            <option value="oldest">Oldest</option>
+                            <option value="az">A → Z</option>
+                            <option value="za">Z → A</option>
+                            <option value="most-tech">Most Techniques</option>
+                            <option value="fewest-tech">Fewest Techniques</option>
+                        </select>
+
+                        <label for="searchInput" style="color:var(--text-color); font-weight:600; margin-left:10px;">Search:</label>
+                        <input id="searchInput" class="search-input" type="search" placeholder="Search title, technique, client..." aria-label="Search projects" />
                     </div>
 
                     <div id="projectsGrid" class="projects-grid"></div>
@@ -40,5 +60,7 @@
     </header>
     
 </body>
+    <!-- Landing parallax script (keeps prefers-reduced-motion support) -->
+    <script src="../js/landing-parallax.js" defer></script>
     <script src="../js/project.js"></script>
 </html>

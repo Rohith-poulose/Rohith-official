@@ -11,8 +11,8 @@
 }
 
 :root {
-    --main-color: #686BC8;
-    --primary-color: #03A9F4;
+    --main-color:  #03A9F4;
+    --primary-color:#686BC8 ;
     --secondary-color: #FF5722;
     --background-color: #212121;
     --text-color: #fff;
@@ -122,65 +122,114 @@ nav ul li a:hover::after {
 
 .social-icons {
     padding: 30px 0px;
+    display: flex;
+    gap: 14px;
+}
+
+/* Glass-style social icons */
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 22px rgba(2,2,6,0.36);
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
 }
 
 .social-icons a i {
-    display: inline-block;
-    font-size: 24px;
-    margin-right: 20px;
-    padding: 10px;
-    border: 1px solid var(--main-color);
-    border-radius: 50px;
-    color: var(--main-color);
-    transition: all 0.5s;
+    font-size: 18px;
+    color: var(--text-color);
 }
 
-.social-icons a i:hover {
-    background: var(--main-color);
-    color: var(--background-color);
-    box-shadow: 1px 1px 10px 3px var(--main-color);
-    transform: translateY(-10px);
+.social-icons a:hover,
+.social-icons a:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 48px rgba(8,8,12,0.44);
+    background: linear-gradient(90deg, rgba(104,107,200,0.95), rgba(3,169,244,0.9));
+}
+
+.social-icons a:hover i,
+.social-icons a:focus i {
+    color: #fff;
 }
 
 .btn {
-    background: transparent;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    box-shadow: none;
-    padding: 15px 40px;
-    border-radius: 15px;
-    font-size: 20px;
-    font-weight: 500;
-    transition: all 0.25s ease;
+    /* glass base for buttons */
+    background: rgba(255,255,255,0.03);
+    color: var(--text-color);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 28px rgba(2,2,6,0.36);
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.12s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
 }
 .showmorebtn {
-    background: transparent;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    box-shadow: none;
-    padding: 15px 40px;
-    border-radius: 15px;
-    font-size: 20px;
-    font-weight: 500;
-    transition: all 0.25s ease;
+    /* outlined glass button that fills on hover */
+    background: rgba(255,255,255,0.02);
+    color: var(--text-color);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 22px rgba(2,2,6,0.28);
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.12s ease;
     display: block;
     width: max-content;
     margin: 20px auto 0;
     text-align: center;
-    box-shadow: 1px 1px 10px 3px var(--main-color);
+    backdrop-filter: blur(6px) saturate(120%);
 }
 
 .showmorebtn:hover,
 .showmorebtn:focus {
-    background: var(--main-color);
+    background: linear-gradient(90deg, var(--main-color), var(--primary-color));
     color: var(--text-color);
-    border-color: var(--main-color);
-    
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 48px rgba(8,8,12,0.44);
 }
 .btn a {
     color: inherit;
 }
+
+/* Header-specific primary CTA (index page) - keeps global .btn intact for other pages */
+.heading .btn {
+    /* header CTA uses same glass base but slightly larger */
+    background: rgba(255,255,255,0.035);
+    color: var(--text-color);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 12px 32px rgba(8,8,12,0.36);
+    padding: 12px 34px;
+    border-radius: 12px;
+    font-size: 1.9rem;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+    backdrop-filter: blur(6px) saturate(120%);
+}
+.heading .btn:hover,
+.heading .btn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 48px rgba(8,8,12,0.44);
+    background: linear-gradient(90deg, var(--main-color), var(--primary-color));
+}
+
+.heading .btn a { color: inherit; }
 
 /* Unified hover/focus for all primary buttons */
 .btn:hover,
@@ -195,16 +244,14 @@ input[type="submit"]:hover,
 input[type="submit"]:focus,
 input[type="button"]:hover,
 input[type="button"]:focus {
-    background: var(--main-color);
-    color: var(--text-color);
-    border-color: var(--main-color);
-    box-shadow: 1px 1px 10px 3px var(--main-color);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 48px rgba(8,8,12,0.44);
 }
 
 section {
 
     padding: 1.5% 9%;
+    background-color: transparent;
 }
 
 .container {
@@ -397,21 +444,62 @@ section {
 form input,
 form textarea {
     width: 100%;
-    border: 0;
+    border: 1px solid rgba(255,255,255,0.06);
     outline: none;
-    background-color: #414040;
-    color: #fff;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 6px;
-    font-size: 18px;
+    background: rgba(255,255,255,0.03);
+    color: var(--text-color);
+    padding: 14px 16px;
+    margin: 14px 0;
+    border-radius: 12px;
+    font-size: 1.6rem;
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
+    box-shadow: 0 8px 22px rgba(2,2,6,0.45), inset 0 1px 0 rgba(255,255,255,0.02);
+    transition: box-shadow 0.18s ease, transform 0.12s ease, border-color 0.12s ease;
+}
+form input::placeholder,
+form textarea::placeholder { color: rgba(255,255,255,0.6); }
+
+form input:focus,
+form textarea:focus {
+    border-color: rgba(104,107,200,0.95);
+    box-shadow: 0 14px 36px rgba(104,107,200,0.12);
+    transform: translateY(-2px);
 }
 
 form button {
-    padding: 16px 60px;
-    font-size: 18px;
+    /* primary CTA keeps gradient but with subtle glassy overlay */
+    background: linear-gradient(90deg, var(--main-color), var(--primary-color));
+    color: var(--text-color);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 12px 32px rgba(8,8,12,0.36);
+    padding: 12px 28px;
+    font-size: 1.6rem;
     margin-top: 20px;
+    border-radius: 10px;
     cursor: pointer;
+    font-weight: 700;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.12s ease;
+}
+
+/* Hover/focus for contact form submit to match site-wide CTA fill */
+form button:hover,
+form button:focus {
+    background: linear-gradient(90deg, var(--main-color), var(--primary-color));
+    color: var(--text-color);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 48px rgba(8,8,12,0.44);
+    opacity: 0.98;
+}
+
+/* Contact form container: gentle glass panel to improve legibility */
+.contact-right form {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.03);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 12px 36px rgba(2,2,6,0.45);
+    backdrop-filter: blur(6px) saturate(120%);
 }
 
 .copyright {
@@ -531,3 +619,68 @@ nav .fa-solid {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* ---------------- Responsive breakpoints ---------------- */
+/* Large tablets / small desktops */
+@media (max-width: 1199px) {
+    nav { padding: 18px 6%; }
+    .heading { padding: 8% 6%; }
+    .hero-text { font-size: 2.6rem; }
+    .name { font-size: 3.6rem; }
+    .hero-content { font-size: 1.7rem; width: 100%; max-width: 720px; }
+    section { padding: 3.2rem 4.5%; }
+    .container { padding: 18px; }
+}
+
+/* Tablet / small laptop */
+@media (max-width: 900px) {
+    nav { padding: 14px 4%; }
+    .heading { padding: 6% 4%; }
+    .hero-text { font-size: 2.2rem; }
+    .name { font-size: 3.0rem; }
+    .typing { font-size: 1.8rem; }
+    .hero-content { font-size: 1.5rem; padding-top: 12px; }
+    .social-icons { padding: 20px 0; }
+    .social-icons a i { font-size: 20px; padding: 8px; }
+    .btn { font-size: 1.6rem; padding: 10px 22px; }
+    .showmorebtn { font-size: 1.6rem; padding: 10px 20px; }
+    .work { grid-gap: 20px; }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    html { font-size: 56%; }
+    nav { padding: 12px 4%; }
+    .heading { padding: 8% 5% 6% 5%; }
+    .hero-text { font-size: 2.0rem; }
+    .name { font-size: 2.8rem; }
+    .typing { font-size: 1.6rem; }
+    .hero-content { font-size: 1.4rem; width: 100%; }
+    .social-icons a i { font-size: 18px; margin-right: 12px; padding: 6px; }
+    .btn { font-size: 1.4rem; padding: 8px 16px; }
+    .showmorebtn { display: block; width: 100%; box-sizing: border-box; }
+    .work { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); grid-gap: 16px; }
+    .about-col-1, .about-col-2 { flex-basis: 100%; }
+    .contact-left, .contact-right { flex-basis: 100%; }
+    section { padding: 2.2rem 1rem; }
+    .container { padding: 12px; }
+    .project-card img { height: 140px; }
+}
+
+/* Strong overrides: force transparent backgrounds for sections/containers
+     so landing glass layer and decorative blobs show through. Using
+     !important to guard against accidental overrides elsewhere. */
+section,
+section > .container,
+.container,
+main,
+footer,
+.copyright,
+#portfolio,
+#about,
+#contact {
+    background-color: transparent !important;
+}
+
+/* Keep header as designed; only sections/containers are transparent */
+#header { background-color: inherit !important; }

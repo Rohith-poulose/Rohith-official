@@ -7,6 +7,8 @@
     <title>ROHITH</title>
     <!-- ------------------------maincss--------------------- -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/Project/Project.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
     <!-- -----------------favicon------------------------ -->
     <link rel="shortcut icon" href="assets/images/favicon2.png" type="image/x-icon">
     <!-- ----------------------  fontawesome------------ -->
@@ -35,6 +37,16 @@
             </nav>
         </div>
         <!-- ----------------hero section-------------- -->
+        <!-- Landing visuals: animated blobs + glass panel (decorative, aria-hidden) -->
+        <div class="landing-layer" aria-hidden="true">
+            <div class="blobs">
+                <span class="blob" data-speed="0.12"></span>
+                <span class="blob" data-speed="0.08"></span>
+                <span class="blob" data-speed="0.18"></span>
+            </div>
+            <div class="glass-panel"></div>
+        </div>
+
         <div class="heading" id="heading">
            
 
@@ -53,7 +65,7 @@
                         class="fa-brands fa-behance"></i></a>
                 <a target="_blank" href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
-            <button class="btn"><a href="assets/resume/ROHITH_P_RESUME.pdf" download>Resume</a></button>
+            <a class="btn" href="assets/resume/ROHITH_P_RESUME.pdf" download>Resume</a>
         </div>
     </header>
     <div class="top-btn">
@@ -109,46 +121,39 @@
     <section id="portfolio">
         <div class="container">
             <h1 class="sub-title">My works</h1>
-            <div class="work">
-                <div class="work-list one">
-                    <img src="assets/images/portfolio1.png" alt="work 1">
-                    <div class="overlay">
-                        <h1>Turf Booking App</h1>
-                        <p>A complete user-friendly app for book your spot for play football, cricket , badminton etc...
-                            you can download it on playstore</p>
-                        <a target="_blank"
-                            href="https://www.figma.com/proto/zJm46sHHHoIISTFSPQfo6j/PlaySpace?node-id=58-1235&t=PwzjgpBUq5NVi8M7-1"><i
-                                class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work-list two">
-                    <img src="assets/images/nexgear-branding.jpg">
-                    <div class="overlay">
-                        <h1>Brandings</h1>
-                        <p>Versatile branding solutions for businesses</p>
-                        <a target="_blank"
-                            href="https://drive.google.com/drive/folders/1LwyD3vqSta50s7tG3hs7LisGXmCgcXod"><i
-                                class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work-list three">
-                    <iframe title="Living Room – 3D Model" width="100%" height="480"
-                        src="https://sketchfab.com/models/adbd79376245440fb66df2dc3494f189/embed" frameborder="0"
-                        allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking allowfullscreen
-                        mozallowfullscreen="true" webkitallowfullscreen="true">
-                    </iframe>
 
+            <div id="projectsGrid" class="projects-grid loaded">
+                <article class="project-card">
+                    <img src="assets/images/portfolio1.png" alt="Turf Booking App">
+                    <div class="project-info">
+                        <span class="project-category">App</span>
+                        <h3>Turf Booking App</h3>
+                        <p>A user-friendly app to book football, cricket, badminton slots. Prototype & screens on Figma.</p>
+                        <a class="btn" target="_blank" href="https://www.figma.com/proto/zJm46sHHHoIISTFSPQfo6j/PlaySpace?node-id=58-1235&t=PwzjgpBUq5NVi8M7-1">View <i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </article>
 
-                    <!-- <img src="assets/images/thumbnail.png">
-                    <div class="overlay">
-                        <h1>seasonal posters</h1>
-                        <p>Unique seosanal posters with brand consistency and style
-                        </p>
-                        <a target="_blank"
-                            href="https://drive.google.com/drive/folders/1xt0jNVM6fIe5H5mQWFNYZOxnCl5xFlbx?usp=drive_link"><i
-                                class="fa-solid fa-up-right-from-square"></i></a>
-                    </div> -->
-                </div>
+                <article class="project-card">
+                    <img src="assets/images/nexgear-branding.jpg" alt="Branding Projects">
+                    <div class="project-info">
+                        <span class="project-category">Branding</span>
+                        <h3>Brandings</h3>
+                        <p>Versatile branding solutions and identity work for clients and stores.</p>
+                        <a class="btn" target="_blank" href="https://drive.google.com/drive/folders/1LwyD3vqSta50s7tG3hs7LisGXmCgcXod">View <i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <iframe title="Living Room – 3D Model" width="100%" height="240" src="https://sketchfab.com/models/adbd79376245440fb66df2dc3494f189/embed" frameborder="0" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">3D</span>
+                        <h3>3D Interior Model</h3>
+                        <p>Interior 3D model showcasing textures and lighting — embedded Sketchfab model.</p>
+                        <a class="btn" target="_blank" href="https://sketchfab.com/models/adbd79376245440fb66df2dc3494f189">View <i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </article>
             </div>
         </div>
         <a href="/assets/Project/projects.html" class="showmorebtn">Show More</a>
@@ -171,7 +176,7 @@
                                 class="fa-brands fa-behance"></i></a>
                         <a target="_blank" href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
-                    <button class="btn"><a href="assets/resume/ROHITH_P_RESUME.pdf" download>Resume</a></button>
+                    <a class="btn" href="assets/resume/ROHITH_P_RESUME.pdf" download>Resume</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
@@ -200,6 +205,7 @@
     <!-- ---------------type js---------- -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- ------------main js----------- -->
+    <script src="assets/js/landing-parallax.js" defer></script>
     <script src="assets/js/main.js"></script>
 </body>
 
