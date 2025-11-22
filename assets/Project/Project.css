@@ -204,10 +204,10 @@ nav {
 }
 @media (max-width: 600px) {
     #portfolio { padding: 2rem 2%; }
-    .portfolio-controls { width:100%; justify-content:space-between; }
-    .portfolio-controls label { font-size:1.4rem; }
+    .portfolio-controls { width:60%; justify-content:space-between; }
+    .portfolio-controls label { font-size:1.3rem; }
     .portfolio-controls select { min-width: 140px; }
-    .project-card img { height:140px; }
+    .project-card img { height:100px; }
     .project-info h3 { font-size:1.6rem; }
 }
 
