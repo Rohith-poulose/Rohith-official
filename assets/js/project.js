@@ -244,20 +244,6 @@ const projects = [
     role: "Motion Designer",
     client: "Personal",
     url: "#"
-  }, {
-    id: 16,
-    title: "new project",
-    category: "2D Animation",
-    description: "A kinetic typography short created for social media, using text manipulation to deliver a message about authentic digital presence.",
-    longDescription: "The goal was to create a punchy, shareable animation that addresses social media psychology. Specifically, I wanted to visually transform a negative statement into a positive call to action using motion. Created in Adobe Animate, this project relies heavily on timing and 'text replacement' techniques. I animated a red strikethrough effect to cancel out specific words (like 'don't'), dynamically changing the sentence's meaning in real-time. The background utilizes a dotted world map vector to symbolize global connectivity, while the icons below anchor the context. The final result is a clean, message-driven motion graphic suitable for Instagram Reels or LinkedIn, effectively demonstrating how simple text animation can alter narrative tone.",
-    image: "/assets/project/Images/textani.png",
-    gallery: ["/assets/project/Images/textani.png"],
-    techniques: ["Kinetic Typography", "Vector Animation", "Timing & Pacing", "Visual Storytelling", "Symbol Management"],
-    softwares: ["After Effects", "Illustrator"],
-    year: 2024,
-    role: "Motion Designer",
-    client: "Personal",
-    url: "#"
   }
 ];
 
